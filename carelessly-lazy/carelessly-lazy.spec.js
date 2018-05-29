@@ -3,32 +3,32 @@ var lazyGuy = require('./carelessly-lazy.js');
 describe('guy', function () {
   var guy = new lazyGuy();
 
-  it('stating something', function () {
+  xit('stating something', function () {
     var result = guy.hey('Tom-ay-to, tom-aaaah-to.');
     expect(result).toEqual('Whatever.');
   });
 
-  xit('shouting', function () {
+  it('shouting', function () {
     var result = guy.hey('WATCH OUT!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit('shouting gibberish', function () {
+  it('shouting gibberish', function () {
     var result = guy.hey('FCECDFCAAB');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit('asking a question', function () {
+  it('asking a question', function () {
     var result = guy.hey('Does this cryogenic chamber make me look fat?');
     expect(result).toEqual('Sure.');
   });
 
-  xit('asking a numeric question', function () {
+  it('asking a numeric question', function () {
     var result = guy.hey('You are, what, like 15?');
     expect(result).toEqual('Sure.');
   });
 
-  xit('asking gibberish', function () {
+  it('asking gibberish', function () {
     var result = guy.hey('fffbbcbeab?');
     expect(result).toEqual('Sure.');
   });
@@ -43,12 +43,12 @@ describe('guy', function () {
     expect(result).toEqual('Whatever.');
   });
 
-  xit('forceful questions', function () {
+  it('forceful questions', function () {
     var result = guy.hey('WHAT THE HELL WERE YOU THINKING?');
     expect(result).toEqual("Calm down, I know what I'm doing!");
   });
 
-  xit('shouting numbers', function () {
+  it('shouting numbers', function () {
     var result = guy.hey('1, 2, 3 GO!');
     expect(result).toEqual('Whoa, chill out!');
   });
@@ -58,17 +58,17 @@ describe('guy', function () {
     expect(result).toEqual('Whatever.');
   });
 
-  xit('question with only numbers', function () {
+  it('question with only numbers', function () {
     var result = guy.hey('4?');
     expect(result).toEqual('Sure.');
   });
 
-  xit('shouting with abusive language', function () {
+  it('shouting with abusive language', function () {
     var result = guy.hey('ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!');
     expect(result).toEqual('Whoa, chill out!');
   });
 
-  xit('shouting with no exclamation mark', function () {
+  it('shouting with no exclamation mark', function () {
     var result = guy.hey('I HATE YOU');
     expect(result).toEqual('Whoa, chill out!');
   });
@@ -78,17 +78,17 @@ describe('guy', function () {
     expect(result).toEqual('Whatever.');
   });
 
-  xit('prattling on', function () {
+  it('prattling on', function () {
     var result = guy.hey('Wait! Hang on.  Are you going to be OK?');
     expect(result).toEqual('Sure.');
   });
 
-  xit('silence', function () {
+  it('silence', function () {
     var result = guy.hey('');
     expect(result).toEqual('Fine. Be that way!');
   });
 
-  xit('prolonged silence', function () {
+  it('prolonged silence', function () {
     var result = guy.hey('   ');
     expect(result).toEqual('Fine. Be that way!');
   });
