@@ -11,15 +11,18 @@ lazyGuy.prototype.hey = function (sentence) {
     let newSentence = sentence.replace(/\s/g, "");
     let sentenceWithNoDigits = newSentence.replace(/[0-9]/g, "");
     let upperCaseSentence = sentenceWithNoDigits.toUpperCase();
-    if (upperCaseSentence.toUpperCase().localeCompare(sentenceWithNoDigits) === 0) {
-        if (sentenceWithNoDigits.charAt(sentenceWithNoDigits.length - 1).localeCompare('?') != 0)
-            return 'Whoa, chill out!';
-        else if (sentenceWithNoDigits.length > 1)
+    if (sentenceWithNoDigits.charAt(sentenceWithNoDigits.length - 1) === "?") {
+        if ((sentenceWithNoDigits.localeCompare(upperCaseSentence) === 0) && (sentenceWithNoDigits.length > 1))
             return 'Calm down, I know what I\'m doing!'
+        else
+            return 'Sure.'
 
-    } else if (newSentence.charAt(newSentence.length - 1) === "?") {
-        return 'Sure.'
     }
+
+    if (sentenceWithNoDigits.localeCompare(upperCaseSentence) === 0)
+        return 'Whoa, chill out!';
+    else
+        return 'Whatever.';
 
 }
 

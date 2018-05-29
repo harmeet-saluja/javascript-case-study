@@ -13,5 +13,7 @@
     "no-console": "off",
     "strict": ["error", "global"],
     "curly": "warn"
+	"indent": ["error", "tab"],
+	"complexity": ["error", { "max": 3 }]
   }
 }
